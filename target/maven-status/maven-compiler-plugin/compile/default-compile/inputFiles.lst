@@ -1,32 +1,30 @@
-/Users/ejazs/Documents/AWS/Blogs, Whitepapers & QuickStarts/twitter-like-app-neptune/neptune-utils/src/main/java/com/aws/neptune/utils/generator/bean/CSVConfig.java
-/Users/ejazs/Documents/AWS/Blogs, Whitepapers & QuickStarts/twitter-like-app-neptune/neptune-utils/src/main/java/com/aws/neptune/utils/generator/GSONUtil.java
-/Users/ejazs/Documents/AWS/Blogs, Whitepapers & QuickStarts/twitter-like-app-neptune/neptune-utils/src/main/java/com/aws/neptune/utils/generator/bean/VertexTypeBean.java
-/Users/ejazs/Documents/AWS/Blogs, Whitepapers & QuickStarts/twitter-like-app-neptune/neptune-utils/src/main/java/com/aws/neptune/utils/generator/bean/EdgeTypeBean.java
-/Users/ejazs/Documents/AWS/Blogs, Whitepapers & QuickStarts/twitter-like-app-neptune/neptune-utils/src/main/java/com/aws/neptune/utils/importer/vertex/VertexLoaderWorker.java
-/Users/ejazs/Documents/AWS/Blogs, Whitepapers & QuickStarts/twitter-like-app-neptune/neptune-utils/src/main/java/com/aws/neptune/utils/generator/bean/RelationBean.java
-/Users/ejazs/Documents/AWS/Blogs, Whitepapers & QuickStarts/twitter-like-app-neptune/neptune-utils/src/main/java/com/aws/neptune/utils/generator/bean/VertexCentricIndexBean.java
-/Users/ejazs/Documents/AWS/Blogs, Whitepapers & QuickStarts/twitter-like-app-neptune/neptune-utils/src/main/java/com/aws/neptune/utils/importer/util/BatchHelper.java
-/Users/ejazs/Documents/AWS/Blogs, Whitepapers & QuickStarts/twitter-like-app-neptune/neptune-utils/src/main/java/com/aws/neptune/utils/generator/bean/VertexLabelBean.java
-/Users/ejazs/Documents/AWS/Blogs, Whitepapers & QuickStarts/twitter-like-app-neptune/neptune-utils/src/main/java/com/aws/neptune/utils/importer/util/WorkerListener.java
-/Users/ejazs/Documents/AWS/Blogs, Whitepapers & QuickStarts/twitter-like-app-neptune/neptune-utils/src/main/java/com/aws/neptune/utils/generator/bean/EdgeLabelBean.java
-/Users/ejazs/Documents/AWS/Blogs, Whitepapers & QuickStarts/twitter-like-app-neptune/neptune-utils/src/main/java/com/aws/neptune/utils/generator/bean/PropertyKeyBean.java
-/Users/ejazs/Documents/AWS/Blogs, Whitepapers & QuickStarts/twitter-like-app-neptune/neptune-utils/src/main/java/com/aws/neptune/utils/generator/CSVGenerator.java
-/Users/ejazs/Documents/AWS/Blogs, Whitepapers & QuickStarts/twitter-like-app-neptune/neptune-utils/src/main/java/com/aws/neptune/utils/importer/dataloader/DataFileLoader.java
-/Users/ejazs/Documents/AWS/Blogs, Whitepapers & QuickStarts/twitter-like-app-neptune/neptune-utils/src/main/java/com/aws/neptune/utils/generator/bean/EdgeMapBean.java
-/Users/ejazs/Documents/AWS/Blogs, Whitepapers & QuickStarts/twitter-like-app-neptune/neptune-utils/src/main/java/com/aws/neptune/utils/generator/bean/GSONSchema.java
-/Users/ejazs/Documents/AWS/Blogs, Whitepapers & QuickStarts/twitter-like-app-neptune/neptune-utils/src/main/java/com/aws/neptune/utils/importer/util/Constants.java
-/Users/ejazs/Documents/AWS/Blogs, Whitepapers & QuickStarts/twitter-like-app-neptune/neptune-utils/src/main/java/com/aws/neptune/utils/generator/NeptuneGraphBench.java
-/Users/ejazs/Documents/AWS/Blogs, Whitepapers & QuickStarts/twitter-like-app-neptune/neptune-utils/src/main/java/com/aws/neptune/utils/generator/bean/VertexMapBean.java
-/Users/ejazs/Documents/AWS/Blogs, Whitepapers & QuickStarts/twitter-like-app-neptune/neptune-utils/src/main/java/com/aws/neptune/utils/importer/util/WorkerPool.java
-/Users/ejazs/Documents/AWS/Blogs, Whitepapers & QuickStarts/twitter-like-app-neptune/neptune-utils/src/main/java/com/aws/neptune/utils/importer/util/Worker.java
-/Users/ejazs/Documents/AWS/Blogs, Whitepapers & QuickStarts/twitter-like-app-neptune/neptune-utils/src/main/java/com/aws/neptune/utils/s3uploader/S3Uploader.java
-/Users/ejazs/Documents/AWS/Blogs, Whitepapers & QuickStarts/twitter-like-app-neptune/neptune-utils/src/main/java/com/aws/neptune/utils/importer/edge/EdgeLoaderWorker.java
-/Users/ejazs/Documents/AWS/Blogs, Whitepapers & QuickStarts/twitter-like-app-neptune/neptune-utils/src/main/java/com/aws/neptune/utils/importer/dataloader/DataLoader.java
-/Users/ejazs/Documents/AWS/Blogs, Whitepapers & QuickStarts/twitter-like-app-neptune/neptune-utils/src/main/java/com/aws/neptune/utils/importer/util/Config.java
-/Users/ejazs/Documents/AWS/Blogs, Whitepapers & QuickStarts/twitter-like-app-neptune/neptune-utils/src/main/java/com/aws/neptune/utils/generator/bean/CSVIdBean.java
-/Users/ejazs/Documents/AWS/Blogs, Whitepapers & QuickStarts/twitter-like-app-neptune/neptune-utils/src/main/java/com/aws/neptune/utils/generator/IdStore.java
-/Users/ejazs/Documents/AWS/Blogs, Whitepapers & QuickStarts/twitter-like-app-neptune/neptune-utils/src/main/java/com/aws/neptune/utils/importer/schema/SchemaLoader.java
-/Users/ejazs/Documents/AWS/Blogs, Whitepapers & QuickStarts/twitter-like-app-neptune/neptune-utils/src/main/java/com/aws/neptune/utils/generator/bean/BatchImporterDataMap.java
-/Users/ejazs/Documents/AWS/Blogs, Whitepapers & QuickStarts/twitter-like-app-neptune/neptune-utils/src/main/java/com/aws/neptune/utils/generator/bean/IndexBean.java
-/Users/ejazs/Documents/AWS/Blogs, Whitepapers & QuickStarts/twitter-like-app-neptune/neptune-utils/src/main/java/com/aws/neptune/utils/importer/BatchImport.java
-/Users/ejazs/Documents/AWS/Blogs, Whitepapers & QuickStarts/twitter-like-app-neptune/neptune-utils/src/main/java/com/aws/neptune/utils/generator/bean/ColumnBean.java
+/home/ec2-user/neptune-utils/src/main/java/com/aws/neptune/utils/generator/IdStore.java
+/home/ec2-user/neptune-utils/src/main/java/com/aws/neptune/utils/generator/bean/VertexTypeBean.java
+/home/ec2-user/neptune-utils/src/main/java/com/aws/neptune/utils/generator/NeptuneGraphBench.java
+/home/ec2-user/neptune-utils/src/main/java/com/aws/neptune/utils/generator/bean/EdgeLabelBean.java
+/home/ec2-user/neptune-utils/src/main/java/com/aws/neptune/utils/importer/vertex/VertexLoaderWorker.java
+/home/ec2-user/neptune-utils/src/main/java/com/aws/neptune/utils/generator/bean/EdgeMapBean.java
+/home/ec2-user/neptune-utils/src/main/java/com/aws/neptune/utils/generator/bean/EdgeTypeBean.java
+/home/ec2-user/neptune-utils/src/main/java/com/aws/neptune/utils/importer/util/BatchHelper.java
+/home/ec2-user/neptune-utils/src/main/java/com/aws/neptune/utils/generator/bean/GSONSchema.java
+/home/ec2-user/neptune-utils/src/main/java/com/aws/neptune/utils/importer/util/Worker.java
+/home/ec2-user/neptune-utils/src/main/java/com/aws/neptune/utils/generator/bean/CSVConfig.java
+/home/ec2-user/neptune-utils/src/main/java/com/aws/neptune/utils/generator/GSONUtil.java
+/home/ec2-user/neptune-utils/src/main/java/com/aws/neptune/utils/importer/dataloader/DataLoader.java
+/home/ec2-user/neptune-utils/src/main/java/com/aws/neptune/utils/generator/bean/VertexCentricIndexBean.java
+/home/ec2-user/neptune-utils/src/main/java/com/aws/neptune/utils/importer/util/Constants.java
+/home/ec2-user/neptune-utils/src/main/java/com/aws/neptune/utils/generator/bean/CSVIdBean.java
+/home/ec2-user/neptune-utils/src/main/java/com/aws/neptune/utils/importer/util/Config.java
+/home/ec2-user/neptune-utils/src/main/java/com/aws/neptune/utils/s3uploader/S3Uploader.java
+/home/ec2-user/neptune-utils/src/main/java/com/aws/neptune/utils/importer/util/WorkerPool.java
+/home/ec2-user/neptune-utils/src/main/java/com/aws/neptune/utils/generator/CSVGenerator.java
+/home/ec2-user/neptune-utils/src/main/java/com/aws/neptune/utils/importer/edge/EdgeLoaderWorker.java
+/home/ec2-user/neptune-utils/src/main/java/com/aws/neptune/utils/generator/bean/IndexBean.java
+/home/ec2-user/neptune-utils/src/main/java/com/aws/neptune/utils/generator/bean/VertexLabelBean.java
+/home/ec2-user/neptune-utils/src/main/java/com/aws/neptune/utils/importer/util/WorkerListener.java
+/home/ec2-user/neptune-utils/src/main/java/com/aws/neptune/utils/generator/bean/PropertyKeyBean.java
+/home/ec2-user/neptune-utils/src/main/java/com/aws/neptune/utils/importer/dataloader/DataFileLoader.java
+/home/ec2-user/neptune-utils/src/main/java/com/aws/neptune/utils/generator/bean/ColumnBean.java
+/home/ec2-user/neptune-utils/src/main/java/com/aws/neptune/utils/generator/bean/BatchImporterDataMap.java
+/home/ec2-user/neptune-utils/src/main/java/com/aws/neptune/utils/generator/bean/VertexMapBean.java
+/home/ec2-user/neptune-utils/src/main/java/com/aws/neptune/utils/generator/bean/RelationBean.java

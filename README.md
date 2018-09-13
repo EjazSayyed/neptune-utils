@@ -104,8 +104,8 @@ You can find sample search and insert queries in [samples/twitter-like-queries.t
 
 # Learn more
 
-* **Amazon Neptune Deep Dive**:[Deep dive on Amazon Neptune](https://www.youtube.com/watch?v=6o1Ezf6NZ_E)
-* **FAQs**:[Amazon Neptune FAQs](https://aws.amazon.com/neptune/faqs/) 
+* ** [Deep dive on Amazon Neptune](https://www.youtube.com/watch?v=6o1Ezf6NZ_E) **
+* ** [Amazon Neptune FAQs](https://aws.amazon.com/neptune/faqs/) **
 
 # License
 [Apache 2.0](LICENSE)

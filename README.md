@@ -14,13 +14,16 @@ When the reader has completed this Code Pattern, they will understand how to:
 
 ## Flow
 Prerequisites:
-Provision Amazon Neptune Cluster (single node), neptune-utils, S3 bucket, Java and Maven installed on a client machine
+-Provision Amazon Neptune Cluster (single node)
+-Create Amazon S3 bucket 
+-Provision an Amazon EC2 instance with Instance Profile that allows to read/write to Amazon S3
+-Install and configure Java and Maven on the above EC2 instance. For more details please visit https://docs.aws.amazon.com/neptune/latest/userguide/access-graph-gremlin-java.html. Follow previous doc link upto step#4.
+-Install Apache Tinkerpop Gremlin client and configure the connectivity to Amazon Neptune as described here - https://docs.aws.amazon.com/neptune/latest/userguide/access-graph-gremlin-console.html
 
-1. The user generates Twitter sample schema and data using JanusGraph utilities
-2. The user loads schema and imports data in backend servers using JanusGraph utilities
-3. The user makes search and update requests in a REST/custom client
-4. The client app sends the REST requests to JanusGraph server
-5. The JanusGraph server interacts with backend to process and return graph data
+1. The user downloads neptune-utils from this gitHub repo
+2. The user generates Twitter sample data using Neptune utilities (in Amazon S3)
+3. The user loads this data into Amazon Neptune using Amazon Neptune Bulk Loader utility
+4. The user makes search queries and update the graph using Apache Tinkerpop Gremlin client
 
 ## Included components
 
@@ -31,9 +34,6 @@ Provision Amazon Neptune Cluster (single node), neptune-utils, S3 bucket, Java a
 * [Databases](https://en.wikipedia.org/wiki/IBM_Information_Management_System#.22Full_Function.22_databases): Repository for storing and managing collections of data.
 * [Java](https://java.com/en/): A secure, object-oriented programming language for creating applications.
 
-# Watch the Video
-
-[![](https://img.youtube.com/vi/1TQcPWgPvF8/0.jpg)](https://www.youtube.com/watch?v=1TQcPWgPvF8)
 
 # Steps
 ## Run locally

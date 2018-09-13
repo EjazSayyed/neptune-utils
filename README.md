@@ -64,16 +64,25 @@ Run the command in `neptune-utils` folder to generate data into `/tmp` folder on
 
 ### 4. Load graph data into Amazon Neptune
 
-A graph schema can be loaded from either the Gremlin console or a java utility. You can check the
-doc [doc/users_guide.md](doc/users_guide.md) for details. 
+Amazon Neptune provides a process for loading data from external files directly into a Neptune DB instance. You can use this process instead of executing a large number of INSERT statements, addVertex and addEdge steps, or other API calls.
+This utility is called the Neptune Loader. For more information on Loader command please refer - https://docs.aws.amazon.com/neptune/latest/userguide/bulk-load.html
 
+Below is the sample `curl` command to load data into Amazon Neptune using Neptune Loader.
+```
+curl -X POST -H 'Content-Type: application/json' http://<amazon-neptune-cluster-endpoint>:8182/loader -d '
+{
+"source" : "s3://bucket-name/bucket-folder/",
+"format" : "csv",
+"iamRoleArn" : "arn:aws:iam::<account-number>:role/<role-name>",
+"region" : "us-east-1",
+"failOnError" : "FALSE"
+}'
+```
 
-
-Alternatively, just run one command in `janusgraph-utils` folder to
+Alternatively, just run one command in `neptune-utils` folder to
 load schema and import data.
 ```
-export JANUSGRAPH_HOME=~/janusgraph
-./run.sh import ~/janusgraph/conf/janusgraph-cql-es.properties /tmp /tmp/schema.json /tmp/datamapper.json
+./run.sh import <s3-bucket-name> <iam-role-arn> 
 ```
 
 ### 5. Run interactive remote queries

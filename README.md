@@ -2,10 +2,10 @@
 
 # Develop a graph database app using Amazon Neptune
 
-This Code Pattern contains sample data and code for running a Twitter-like application in Amazon Neptune. The utility code illustrates how to use Amazon Neptune APIs, ingest data, and query graph. Developers can use or modify the code to build and operate their custom graph applications, or create similar java and groovy files to interact with Amazon Neptune.
+This gitHub lab contains sample data and code for running a Twitter-like application in Amazon Neptune. The utility code illustrates how to use Amazon Neptune APIs, ingest data, and query graph. Developers can use or modify the code to build and operate their custom graph applications, or create similar java and groovy files to interact with Amazon Neptune.
 
 When the reader has completed this Code Pattern, they will understand how to:
-* Generate a synthetic graph dataset
+* Generate a synthetic twitter-like graph dataset
 * Upload graph dataset to Amazon S3
 * Use Amazon Neptune Bulk Loader to import graph data in csv files into Amazon Neptune graph database
 * Query and update graph data using Apache Gremlin Console and REST API
@@ -23,7 +23,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 ## Flow
 
 1. The user downloads neptune-utils from this gitHub repo
-2. The user generates Twitter sample data using Neptune utilities (in Amazon S3)
+2. The user generates Twitter sample data using Neptune java utility in this repo (graph data would be available in Amazon S3)
 3. The user loads this data into Amazon Neptune using Amazon Neptune Bulk Loader utility
 4. The user makes search queries and update the graph using Apache Tinkerpop Gremlin client
 

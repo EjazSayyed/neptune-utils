@@ -37,7 +37,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 1. [Install prerequisites](#1-install-prerequisites)
 2. [Clone the repo](#2-clone-the-repo)
 3. [Generate the graph sample](#3-generate-the-graph-sample)
-4. [Load schema and import data](#4-load-schema-and-import-data)
+4. [Load graph data into Amazon Neptune](#4-load-graph-data-into-amazon-neptune)
 5. [Run interactive remote queries](#5-run-interactive-remote-queries)
 
 ### 1. Install prerequisites
@@ -62,10 +62,14 @@ Run the command in `neptune-utils` folder to generate data into `/tmp` folder on
 ./run.sh gencsv csv-conf/twitter-like-w-date.json <s3-bucket> <bucket-folder>
 ```
 
-### 4. Load schema and import data
+### 4. Load graph data into Amazon Neptune
 
 A graph schema can be loaded from either the Gremlin console or a java utility. You can check the
-doc [doc/users_guide.md](doc/users_guide.md) for details. Alternatively, just run one command in `janusgraph-utils` folder to
+doc [doc/users_guide.md](doc/users_guide.md) for details. 
+
+
+
+Alternatively, just run one command in `janusgraph-utils` folder to
 load schema and import data.
 ```
 export JANUSGRAPH_HOME=~/janusgraph

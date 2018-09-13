@@ -12,8 +12,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 
 ![](doc/source/images/architecture.png)
 
-## Flow
-Prerequisites:
+## Prerequisites:
 
 - Provision Amazon Neptune Cluster (single node)
 - Create Amazon S3 bucket 
@@ -21,19 +20,16 @@ Prerequisites:
 - Install and configure Java and Maven on the above EC2 instance. For more details please visit https://docs.aws.amazon.com/neptune/latest/userguide/access-graph-gremlin-java.html. Follow previous doc link upto step#4.
 - Install Apache Tinkerpop Gremlin client and configure the connectivity to Amazon Neptune as described here - https://docs.aws.amazon.com/neptune/latest/userguide/access-graph-gremlin-console.html
 
+## Flow
+
 1. The user downloads neptune-utils from this gitHub repo
 2. The user generates Twitter sample data using Neptune utilities (in Amazon S3)
 3. The user loads this data into Amazon Neptune using Amazon Neptune Bulk Loader utility
 4. The user makes search queries and update the graph using Apache Tinkerpop Gremlin client
 
-## Included components
-
-* [Apache Cassandra](http://cassandra.apache.org/): An open source, scalable, high availability database.
-* [JanusGraph](http://janusgraph.org/): A highly scalable graph database optimized for storing and querying large graphs.
-
-## Featured technologies
-* [Databases](https://en.wikipedia.org/wiki/IBM_Information_Management_System#.22Full_Function.22_databases): Repository for storing and managing collections of data.
-* [Java](https://java.com/en/): A secure, object-oriented programming language for creating applications.
+## Features
+* This is fully extensible code wherein developers can change the number/type of vertices and edges by modifying the config JSON files
+* Sample large, medium and tiny config files are provided to test large (upto millions), medium and small datasets.
 
 
 # Steps

@@ -14,11 +14,12 @@ When the reader has completed this Code Pattern, they will understand how to:
 
 ## Flow
 Prerequisites:
--Provision Amazon Neptune Cluster (single node)
--Create Amazon S3 bucket 
--Provision an Amazon EC2 instance with Instance Profile that allows to read/write to Amazon S3
--Install and configure Java and Maven on the above EC2 instance. For more details please visit https://docs.aws.amazon.com/neptune/latest/userguide/access-graph-gremlin-java.html. Follow previous doc link upto step#4.
--Install Apache Tinkerpop Gremlin client and configure the connectivity to Amazon Neptune as described here - https://docs.aws.amazon.com/neptune/latest/userguide/access-graph-gremlin-console.html
+
+- Provision Amazon Neptune Cluster (single node)
+- Create Amazon S3 bucket 
+- Provision an Amazon EC2 instance with Instance Profile that allows to read/write to Amazon S3
+- Install and configure Java and Maven on the above EC2 instance. For more details please visit https://docs.aws.amazon.com/neptune/latest/userguide/access-graph-gremlin-java.html. Follow previous doc link upto step#4.
+- Install Apache Tinkerpop Gremlin client and configure the connectivity to Amazon Neptune as described here - https://docs.aws.amazon.com/neptune/latest/userguide/access-graph-gremlin-console.html
 
 1. The user downloads neptune-utils from this gitHub repo
 2. The user generates Twitter sample data using Neptune utilities (in Amazon S3)

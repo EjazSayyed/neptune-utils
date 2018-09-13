@@ -99,14 +99,13 @@ You can find sample search and insert queries in [samples/twitter-like-queries.t
 ![Sample output for "Find Indiana Jones' tweets that his followers retweeted"](doc/source/images/sample_output.png)
 
 # Links
-* [Demo on Youtube](https://www.youtube.com/watch?v=1TQcPWgPvF8): Watch the video.
-* [JanusGraph](http://docs.janusgraph.org/0.1.0-SNAPSHOT/): Learn more about this highly scalable graph database optimized for storing and querying large graphs distributed across a multi-machine cluster.
-* [Data and Analytics Reference Architecture](https://www.ibm.com/cloud/garage/content/architecture/dataAnalyticsArchitecture): Learn how this Journey fits into the Data and Analytics Reference Architecture
+* [Amazon Neptune Samples](https://github.com/aws-samples/amazon-neptune-samples): Sample data sets and code examples for Amazon Neptune.
+* [Amazon Neptune Tools](https://github.com/awslabs/amazon-neptune-tools): Tools and utilities related to Amazon Neptune.
 
 # Learn more
 
-* **Data Analytics Code Patterns**: Enjoyed this Code Pattern? Check out our other [Data Analytics Code Patterns](https://developer.ibm.com/code/technologies/data-science/)
-* **AI and Data Code Pattern Playlist**: Bookmark our [playlist](https://www.youtube.com/playlist?list=PLzUbsvIyrNfknNewObx5N7uGZ5FKH0Fde) with all of our Code Pattern videos
+* **Amazon Neptune Deep Dive**:[Deep dive on Amazon Neptune](https://www.youtube.com/watch?v=6o1Ezf6NZ_E)
+* **FAQs**:[Amazon Neptune FAQs](https://aws.amazon.com/neptune/faqs/) 
 
 # License
 [Apache 2.0](LICENSE)

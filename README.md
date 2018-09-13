@@ -1,21 +1,20 @@
 [![Build Status](https://travis-ci.org/IBM/janusgraph-utils.svg?branch=master)](https://travis-ci.org/IBM/janusgraph-utils)
 
-# Develop a graph database app using JanusGraph
+# Develop a graph database app using Amazon Neptune
 
-This Code Pattern contains sample data and code for running a Twitter-like application in JanusGraph. The utility code illustrates how to use OLTP APIs to define schema, ingest data, and query graph. Developers can use or modify the code to build and operate their custom graph applications, or create similar java and groovy files to interact with JanusGraph.
+This Code Pattern contains sample data and code for running a Twitter-like application in Amazon Neptune. The utility code illustrates how to use Amazon Neptune APIs, ingest data, and query graph. Developers can use or modify the code to build and operate their custom graph applications, or create similar java and groovy files to interact with Amazon Neptune.
 
 When the reader has completed this Code Pattern, they will understand how to:
 * Generate a synthetic graph dataset
-* Load a graph schema from json
-* Import graph data in csv files into JanusGraph database
-* Query and update graph data using Console and REST API
-* Setup and configure a distributed JanusGraph system
+* Upload graph dataset to Amazon S3
+* Use Amazon Neptune Bulk Loader to import graph data in csv files into Amazon Neptune graph database
+* Query and update graph data using Apache Gremlin Console and REST API
 
 ![](doc/source/images/architecture.png)
 
 ## Flow
 Prerequisites:
-Install and configure JanusGraph, Cassandra, ElasticSearch, janusgraph-utils
+Provision Amazon Neptune Cluster (single node), neptune-utils, S3 bucket, Java and Maven installed on a client machine
 
 1. The user generates Twitter sample schema and data using JanusGraph utilities
 2. The user loads schema and imports data in backend servers using JanusGraph utilities

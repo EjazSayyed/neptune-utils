@@ -49,7 +49,7 @@ class=$1
 case $class in
     gencsv)
         shift
-        java -cp "$CP":"${utilityJar}" com.ibm.janusgraph.utils.generator.JanusGraphBench "$@"
+        java -cp "$CP":"${utilityJar}" com.aws.neptune.utils.generator.NeptuneGraphBench "$@"
         ;;
     import)
         shift

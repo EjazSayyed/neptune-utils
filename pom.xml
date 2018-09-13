@@ -16,11 +16,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>janusgraph-utils</groupId>
-  <artifactId>janusgraph-utils</artifactId>
+  <groupId>neptune-utils</groupId>
+  <artifactId>neptune-utils</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>janusgraph-utils</name>
-  <description>Tools for JanusGraph database</description>
+  <name>neptune-utils</name>
+  <description>Tools for Amazon Neptune Graph database</description>
   <build>
     <plugins>
       <plugin>

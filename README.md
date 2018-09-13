@@ -92,6 +92,14 @@ Now it is time to run few sample queries on the data set that we have just loade
 Once you install and configure the Apache Tinkerpop Gremlin Console as mentioned @ https://docs.aws.amazon.com/neptune/latest/userguide/access-graph-gremlin-console.html, follow the below steps to run the sample queries.
 
 
+
+
+[TODO: Few Queries Here]
+
+
+
+
+
 You can find sample search and insert queries in [samples/twitter-like-queries.txt](samples/twitter-like-queries.txt).
 
 # Sample output

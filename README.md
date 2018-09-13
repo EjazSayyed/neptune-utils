@@ -87,40 +87,11 @@ load schema and import data.
 
 ### 5. Run interactive remote queries
 
-Configure JanusGraph server by running these commands:
+Now it is time to run few sample queries on the data set that we have just loaded into Amazon Neptune.
 
-```
-cd ~/janusgraph/conf/gremlin-server
-cp ~/janusgraph-utils/samples/date-helper.groovy ../../scripts
-cp ../janusgraph-cql-es.properties janusgraph-cql-es-server.properties
-cp gremlin-server.yaml rest-gremlin-server.yaml
-```
+Once you install and configure the Apache Tinkerpop Gremlin Console as mentioned @ https://docs.aws.amazon.com/neptune/latest/userguide/access-graph-gremlin-console.html, follow the below steps to run the sample queries.
 
-Add this line to janusgraph-cql-es-server.properties:
-```
-gremlin.graph=org.janusgraph.core.JanusGraphFactory
-```
 
-Change the following four lines in rest-gremlin-server.yaml:
-```
-host: x.x.x.x (your server ip)
-channelizer: org.apache.tinkerpop.gremlin.server.channel.HttpChannelizer
-graph: conf/gremlin-server/janusgraph-cql-es-server.properties}
-scripts: [scripts/empty-sample.groovy,scripts/date-helper.groovy]}}
-```
-
-Start JanusGraph server:
-```
-cd ~/janusgraph; ./bin/gremlin-server.sh ./conf/gremlin-server/rest-gremlin-server.yaml
-```
-
-Now you can query and update graph data using REST. For example, send REST requests using RESTClient
-in browser with following:
-```
-Method: POST
-URL: http://x.x.x.x:8182
-Body: {"gremlin":“query_to_run"}
-```
 You can find sample search and insert queries in [samples/twitter-like-queries.txt](samples/twitter-like-queries.txt).
 
 # Sample output

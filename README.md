@@ -12,7 +12,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 
 ![](doc/source/images/architecture.png)
 
-## Prerequisites:
+## Prerequisites
 
 - Provision Amazon Neptune Cluster (single node)
 - Create Amazon S3 bucket 
@@ -29,7 +29,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 
 ## Features
 * This is fully extensible code wherein developers can change the number/type of vertices and edges by modifying the config JSON files
-* Sample large, medium and tiny config files are provided to test large (upto millions), medium and small datasets.
+* Sample large, medium and tiny config files are provided to test large (upto millions of vertices and edges), medium and small datasets.
 
 
 # Steps
@@ -41,61 +41,27 @@ When the reader has completed this Code Pattern, they will understand how to:
 5. [Run interactive remote queries](#5-run-interactive-remote-queries)
 
 ### 1. Install prerequisites
-> NOTE: These prerequisites can be installed on one server. The instructions are written for Cassandra 3.10 and ElasticSearch 5.3.0 on Linux. Newer versions should work, but might not have been tested. The folder structures on Mac can be different. Check Cassandra and ElasticSearch official documentations for details.
+Please install and configure all the softwares as mentioned in the prerequisites section above.
+Note that Amazon Neptune is only accessible within a VPC. If you want to access Amazon Neptune instance from outside VPC consider implementing a reverse proxy solution in front of Amazon Netune.
 
-Install Cassandra 3.10 on the storage server. Make the following changes in `/etc/cassandra/cassandra.yaml` and restart Cassandra.
-
-```
-start_rpc: true
-rpc_address: 0.0.0.0
-rpc_port: 9160
-broadcast_rpc_address: x.x.x.x (your storage server ip)
-```
-
-Install ElasticSearch 5.3.0 on the index server. Make the following changes in `/etc/elasticsearch/elasticsearch.yml` and restart ElasticSearch.
-
-```
-network.host: x.x.x.x (your index server ip)
-```
-
-Install JanusGraph on the graph server:
-* Install java, maven, git
-* Run `git clone https://github.com/JanusGraph/janusgraph.git`
-* Run the following commands in the `janusgraph` folder:
-```
-git checkout 4609b6731a01116e96e554140b37ad589f0ae0ca
-mvn clean install -DskipTests=true
-cp conf/janusgraph-cassandra-es.properties conf/janusgraph-cql-es.properties
-```
-* Make the following changes in conf/janusgraph-cql-es.properties:
-```
-storage.backend=cql
-storage.hostname=x.x.x.x (your storage server ip)
-index.search.hostname=x.x.x.x (your index server ip)
-```
-
-Install a REST client, such as RESTClient add-on for Firefox, on the client machine.
 
 ### 2. Clone the repo
 
-Clone the `janusgraph-utils` on the graph server and run `mvn package`.
+Clone the `neptune-utils` on the EC2 instance and run `mvn package`.
 
 ```
-git clone https://github.com/IBM/janusgraph-utils.git
-cd janusgraph-utils/
+git clone https://github.com/EjazSayyed/neptune-utils.git
+cd neptune-utils/
 mvn package
 ```
 
 ### 3. Generate the graph sample
 
-Run the command in `janusgraph-utils` folder to generate data into `/tmp` folder.
+Run the command in `neptune-utils` folder to generate data into `/tmp` folder on a local filesystem and then upload it to the Amazon S3 bucket you would specify as an argument.
 ```
-./run.sh gencsv csv-conf/twitter-like-w-date.json /tmp
+./run.sh gencsv csv-conf/twitter-like-w-date.json <s3-bucket> <bucket-folder>
 ```
-Modify the generated user file under `/tmp` so the sample queries will return with data.
-```
-sed -i -e '2s/.*/1,Indiana Jones/' /tmp/User.csv
-```
+
 ### 4. Load schema and import data
 
 A graph schema can be loaded from either the Gremlin console or a java utility. You can check the

@@ -108,6 +108,8 @@ gremlin> :remote console
 ==>All scripts will now be sent to Gremlin Server - [neptune-cluster-endpoint]/172.31.23.188:8182] - type ':remote console' to return to local mode
 gremlin> 
 ```
+Now, let us find a sample user from `User` vertices and use it for running few queries.
+
 [TODO: Few Queries Here]
 
 

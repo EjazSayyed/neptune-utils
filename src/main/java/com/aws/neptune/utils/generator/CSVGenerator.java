@@ -231,9 +231,9 @@ public class CSVGenerator {
                 System.out.println("Generated edge file: "+ filePath);
                 
                 File data = new File(filePath);
-                s3Uploader.upload(data, s3Bucket, bucketFolder+"/"+fileName);
+                s3Uploader.upload(data, s3Bucket, (bucketFolder == null ? fileName : bucketFolder+"/"+fileName));
                 
-                System.out.println("Uploaded " + filePath + " to S3 location " + s3Bucket + "/"+bucketFolder);
+                System.out.println("Uploaded " + filePath + " to S3 location " + s3Bucket + (bucketFolder == null ? "" : "/"+bucketFolder));
                 
             }
         } catch (Exception e) {
@@ -282,8 +282,9 @@ public class CSVGenerator {
             System.out.println("Generated vertex file: "+ filePath);
             
             File data = new File(filePath);
-            s3Uploader.upload(data, s3Bucket, bucketFolder+"/"+ fileName);
-            System.out.println("Uploaded " + filePath + " to S3 location " + s3Bucket + "/"+bucketFolder);
+            s3Uploader.upload(data, s3Bucket, (bucketFolder == null ? fileName : bucketFolder+"/"+fileName));            
+            System.out.println("Uploaded " + filePath + " to S3 location " + s3Bucket + (bucketFolder == null ? "" : "/"+bucketFolder));
+
             
         } catch (Exception e) {
             throw new RuntimeException(e.toString());

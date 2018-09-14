@@ -28,22 +28,25 @@ public class NeptuneGraphBench {
     }
 
     public static void main(String[] args) {
-        if (null == args || args.length < 3) {
+        if (null == args || args.length < 2) {
             System.err.println("Usage: JanusGraphBench <csv-config-file> <s3-bucket> <optional-bucket-folder>");
             System.exit(1);
         }
+        String arg2=null;
        try {
-        
+    	   arg2 = args.length ==2? null: args[2];
+    	   
     	   String csvConfFile = args[0];
-    	   prepareCSV(csvConfFile, args[1], args[2]);
+    	   prepareCSV(csvConfFile, args[1], arg2);
        
            //ejazs - commenting these lines as schema and datamapper are not required for Neptune
            //GSONUtil.writeToFile(args[1] + "/schema.json",GSONUtil.configToSchema(csvConfPath));
            //GSONUtil.writeToFile(args[1] + "/datamapper.json", GSONUtil.toDataMap(csvConfPath));
     
        } catch (Exception e) {
-        System.err.println(e.getMessage());
-        System.exit(1);
+        throw e;
+    	//System.err.println(e.getMessage());
+        //System.exit(1);
     }
 
     }

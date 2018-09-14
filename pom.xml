@@ -173,17 +173,6 @@
       <artifactId>javafaker</artifactId>
       <version>0.13</version>
     </dependency>
-    <dependency>
-      <groupId>org.janusgraph</groupId>
-      <artifactId>janusgraph-all</artifactId>
-      <version>0.1.1</version>
-      <exclusions>
-      	<exclusion>
-      		<groupId>ch.qos.logback</groupId>
-      		<artifactId>logback-classic</artifactId>
-      	</exclusion>
-      </exclusions>
-    </dependency>
 <dependency>
   <groupId>com.amazonaws</groupId>
   <artifactId>aws-java-sdk-bundle</artifactId>

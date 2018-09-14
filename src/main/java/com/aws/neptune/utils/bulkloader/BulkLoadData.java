@@ -15,9 +15,9 @@ public class BulkLoadData {
 		String payload = 
 				"\"source\": \"s3://neptune-s3/twitterlikeapp/\", " +
                 "\"format\": \"csv\", " +
-                "\"iamRoleArn\": \"arn:aws:iam::213930781331:role/s3-from-neptune-2\"" +
+                "\"iamRoleArn\": \"arn:aws:iam::213930781331:role/s3-from-neptune-2\"," +
                 "\"region\": \"us-east-1\", " +
-                "\"failOnError\": \"FALSE\", " +
+                "\"failOnError\": \"FALSE\" " +
                 "}";
         StringEntity entity = new StringEntity(payload,
         		ContentType.create("application/json"));

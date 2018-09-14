@@ -89,11 +89,25 @@ load schema and import data.
 
 Now it is time to run few sample queries on the data set that we have just loaded into Amazon Neptune.
 
-Once you install and configure the Apache Tinkerpop Gremlin Console as mentioned @ https://docs.aws.amazon.com/neptune/latest/userguide/access-graph-gremlin-console.html, follow the below steps to run the sample queries.
+Once you install and configure the Apache Tinkerpop Gremlin Console and are able to connect to your Neptune cluster as mentioned @ https://docs.aws.amazon.com/neptune/latest/userguide/access-graph-gremlin-console.html, follow the below steps to run the sample queries.
 
+```
+[ec2-user@ip-172-31-59-189 bin]$ pwd
+/home/ec2-user/apache-tinkerpop-gremlin-console-3.3.2/bin
+[ec2-user@ip-172-31-59-189 bin]$ ./gremlin.sh 
 
-
-
+         \,,,/
+         (o o)
+-----oOOo-(3)-oOOo-----
+plugin activated: tinkerpop.server
+plugin activated: tinkerpop.utilities
+plugin activated: tinkerpop.tinkergraph
+gremlin> :remote connect tinkerpop.server conf/neptune-remote.yaml
+==>[neptune-cluster-endpoint]/172.31.23.188:8182
+gremlin> :remote console
+==>All scripts will now be sent to Gremlin Server - [neptune-cluster-endpoint]/172.31.23.188:8182] - type ':remote console' to return to local mode
+gremlin> 
+```
 [TODO: Few Queries Here]
 
 

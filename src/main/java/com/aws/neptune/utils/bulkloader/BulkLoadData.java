@@ -13,12 +13,14 @@ public class BulkLoadData {
 	public HttpResponse sendLoadDataRequest(String neptuneEndpoint, String iamRoleArn) throws Exception
 	{
 		String payload = 
-				"\"source\": \"s3://neptune-s3/twitterlikeapp/\", " +
+				"{\"source\": \"s3://neptune-s3/twitterlikeapp/\", " +
                 "\"format\": \"csv\", " +
                 "\"iamRoleArn\": \"arn:aws:iam::213930781331:role/s3-from-neptune-2\"," +
                 "\"region\": \"us-east-1\", " +
                 "\"failOnError\": \"FALSE\" " +
                 "}";
+		System.out.println("Payload => \n"+payload);
+		
         StringEntity entity = new StringEntity(payload,
         		ContentType.create("application/json"));
 
@@ -27,6 +29,8 @@ public class BulkLoadData {
         request.setHeader("Content-Type", "application/json");
         request.setEntity(entity);
 
+        System.out.println("Request => \n"+request);
+        
         HttpResponse response = httpClient.execute(request);
         System.out.println(response.getStatusLine().getStatusCode());
         return response;

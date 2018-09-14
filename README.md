@@ -115,6 +115,7 @@ gremlin> g.V().has('User','~id','1').valueMap()
 ==>{name=[Brenden Johnson]}
 ```
 We shall use the above name to run few queries here -
+
 #1 Who follows ‘Brenden Johnson’?
 ```
 gremlin> g.V().has('name', 'Brenden Johnson').in('Follows').values('name')

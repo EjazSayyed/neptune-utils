@@ -110,11 +110,29 @@ gremlin>
 ```
 Now, let us find a sample user from `User` vertices and use it for running few queries.
 
-[TODO: Few Queries Here]
+```
+gremlin> g.V().has('User','~id','1').valueMap()
+==>{name=[Brenden Johnson]}
+```
+We shall use the above name to run few queries here -
+#1 Who follows ‘Brenden Johnson’?
+```
+gremlin> g.V().has('name', 'Brenden Johnson').in('Follows').values('name')
+==>Jameson Kreiger
+==>Yasmeen Casper
+==>Maverick Altenwerth
+==>Isabel Gibson
+...
+```
 
-
-
-
+#2 Find Brenden Johnson' followers who retweeted his tweets
+```
+gremlin> g.V().has('name', 'Brenden Johnson').in('Follows').as('a').out('Retweets').in('Tweets').has('name', 'Brenden Johnson').select('a').values('name').dedup()
+==>Quentin Watsica
+==>Miss Vivianne Gleichner
+==>Mr. Janet Ratke
+...
+```
 
 You can find sample search and insert queries in [samples/twitter-like-queries.txt](samples/twitter-like-queries.txt).
 

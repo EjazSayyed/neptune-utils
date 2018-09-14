@@ -24,6 +24,7 @@ public class BulkLoadData {
 
         HttpClient httpClient = HttpClientBuilder.create().build();
         HttpPost request = new HttpPost("http://neptune360.cluajh6rcbti.us-east-1.neptune.amazonaws.com:8182/loader");
+        request.setHeader("Content-Type", "application/json");
         request.setEntity(entity);
 
         HttpResponse response = httpClient.execute(request);

@@ -53,7 +53,7 @@ case $class in
         ;;
     import)
         shift
-        java -cp "$CP":"${utilityJar}" com.ibm.janusgraph.utils.importer.BatchImport "$@"
+        java -cp "$CP":"${utilityJar}" com.aws.neptune.utils.bulkloader.BulkLoadData "$@"
         ;;
     loadsch)
         shift

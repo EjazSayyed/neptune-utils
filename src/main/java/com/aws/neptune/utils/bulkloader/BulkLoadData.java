@@ -38,7 +38,7 @@ public class BulkLoadData {
 	        }
 	        
 	        
-	        HttpResponse response = new BulkLoadData().sendLoadDataRequest("neptune360.cluajh6rcbti.us-east-1.neptune.amazonaws.com",  "test");
+	        HttpResponse response = new BulkLoadData().sendLoadDataRequest("http://neptune360.cluajh6rcbti.us-east-1.neptune.amazonaws.com",  "test");
 	        
 	        System.out.println(response);
 	        

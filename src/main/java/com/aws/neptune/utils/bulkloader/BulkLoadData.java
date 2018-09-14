@@ -20,7 +20,7 @@ public class BulkLoadData {
                 "\"failOnError\": \"FALSE\", " +
                 "}";
         StringEntity entity = new StringEntity(payload,
-                ContentType.APPLICATION_FORM_URLENCODED);
+                ContentType.APPLICATION_JSON);
 
         HttpClient httpClient = HttpClientBuilder.create().build();
         HttpPost request = new HttpPost("http://neptune360.cluajh6rcbti.us-east-1.neptune.amazonaws.com:8182/loader");

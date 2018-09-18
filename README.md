@@ -79,8 +79,7 @@ curl -X POST -H 'Content-Type: application/json' http://<amazon-neptune-cluster-
 }'
 ```
 
-Alternatively, just run one command in `neptune-utils` folder to
-load schema and import data.
+Alternatively, just run below command in `neptune-utils` folder.
 ```
 ./run.sh import <s3-bucket-name> <iam-role-arn> 
 ```

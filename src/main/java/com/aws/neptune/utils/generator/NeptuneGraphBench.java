@@ -29,7 +29,7 @@ public class NeptuneGraphBench {
 
     public static void main(String[] args) {
         if (null == args || args.length < 2) {
-            System.err.println("Usage: JanusGraphBench <csv-config-file> <s3-bucket> <optional-bucket-folder>");
+            System.err.println("Usage: NeptuneGraphBench <csv-config-file> <s3-bucket> <optional-bucket-folder>");
             System.exit(1);
         }
         String arg2=null;

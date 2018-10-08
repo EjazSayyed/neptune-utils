@@ -152,5 +152,11 @@ You can find sample search and insert queries in [samples/twitter-like-queries.t
 * [Deep dive on Amazon Neptune](https://www.youtube.com/watch?v=6o1Ezf6NZ_E)
 * [Amazon Neptune FAQs](https://aws.amazon.com/neptune/faqs/)
 
+# Credits
+This gitHub lab is taken from IBM's JanusGraph+Cassandra lab @ https://github.com/IBM/janusgraph-utils.
+Many of our customers reached out to us with similar requests on producing the sample graph data to run and test query performance on Amazon Neptune.
+
+Feel free to send your suggestions and pull requests to this gitHub lab.
+
 # License
 [Apache 2.0](LICENSE)

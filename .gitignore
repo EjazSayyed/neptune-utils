@@ -1,6 +1,6 @@
 bin/
 .classpath
-.DS_Store
+*/.DS_Store
 .project
 .settings/
 .groovy/

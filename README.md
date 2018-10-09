@@ -140,7 +140,8 @@ gremlin> g.V().has('name', 'Brenden Johnson').in('Follows').as('a').out('Retweet
 You can find sample search and insert queries in [samples/twitter-like-queries.txt](samples/twitter-like-queries.txt).
 
 # Extension
-In the above example we have demonstrated how to generate and load simple data set into Amazon Neptune. By modifying the twitter-like-w-date.json file (under csv-conf/ folder) further, you can create other properties of vertices/edges.
+In the above example we have demonstrated how to generate and load simple data set into Amazon Neptune. 
+By modifying the twitter-like-w-date.json file (under csv-conf/ folder) further, you can create other properties of vertices/edges.
 You can also change the number of vertices and number of edges from a specific type of vertex.
 There are other tiny, small, medium and large sample JSON configuration files already created to generate a random data set.
 You can use these configuration files to generate a huge dataset, run interactive queries on the data and test the performance of a Amazon Neptune cluster.

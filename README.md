@@ -141,7 +141,7 @@ You can find sample search and insert queries in [samples/twitter-like-queries.t
 
 # Extension
 In the above example we have demonstrated how to generate and load simple data set into Amazon Neptune. <br/>
-By modifying the `twitter-like-w-date.json` file (under csv-conf/ folder) further, you can create other properties of vertices/edges.<br/>
+By modifying the `twitter-like-w-date.json` file (under `csv-conf/` folder) further, you can create other properties of vertices/edges.<br/>
 You can also change the number of vertices and number of edges from a specific type of vertex.<br/>
 There are other tiny, small, medium and large sample JSON configuration files already created to generate a random data set.<br/>
 You can use these configuration files to generate a huge dataset, run interactive queries on the data and test the performance of a Amazon Neptune cluster.<br/>

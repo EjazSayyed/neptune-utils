@@ -161,7 +161,7 @@ You can use these configuration files to generate a huge dataset, run interactiv
 
 # Credits
 This GitHub lab is taken from IBM's JanusGraph+Cassandra lab @ https://github.com/IBM/janusgraph-utils.
-Many of our customers reached out to us with requests on producing the sample graph data to run ad-hoc queries, do the experimentation and test query performance on Amazon Neptune.
+Many of our customers reached out to us with requests on producing the sample graph data to run ad-hoc queries, do the experimentation and test query performance on Amazon Neptune.<br/>
 Feel free to send your suggestions and pull requests to this GitHub lab.
 
 # License

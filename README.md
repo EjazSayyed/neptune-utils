@@ -2,7 +2,7 @@
 
 # Develop a graph database app using Amazon Neptune
 
-This gitHub lab contains sample data and code for running a Twitter-like application in Amazon Neptune. The utility code illustrates how to use Amazon Neptune APIs, ingest data, and query graph. Developers can use or modify the code to build and operate their custom graph applications, or create similar java and groovy files to interact with Amazon Neptune.
+This GitHub lab contains sample data and code for running a Twitter-like application in Amazon Neptune. The utility code illustrates how to use Amazon Neptune APIs, ingest data, and query graph. Developers can use or modify the code to build and operate their custom graph applications, or create similar java and groovy files to interact with Amazon Neptune.
 
 When the reader has completed this Code Pattern, they will understand how to:
 * Generate a synthetic twitter-like graph dataset
@@ -160,10 +160,9 @@ You can use these configuration files to generate a huge dataset, run interactiv
 * [Amazon Neptune FAQs](https://aws.amazon.com/neptune/faqs/)
 
 # Credits
-This gitHub lab is taken from IBM's JanusGraph+Cassandra lab @ https://github.com/IBM/janusgraph-utils.
-Many of our customers reached out to us with similar requests on producing the sample graph data to run and test query performance on Amazon Neptune.
-
-Feel free to send your suggestions and pull requests to this gitHub lab.
+This GitHub lab is taken from IBM's JanusGraph+Cassandra lab @ https://github.com/IBM/janusgraph-utils.
+Many of our customers reached out to us with requests on producing the sample graph data to run ad-hoc queries, do the experimentation and test query performance on Amazon Neptune.
+Feel free to send your suggestions and pull requests to this GitHub lab.
 
 # License
 [Apache 2.0](LICENSE)

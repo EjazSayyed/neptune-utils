@@ -55,15 +55,7 @@ case $class in
         shift
         java -cp "$CP":"${utilityJar}" com.aws.neptune.utils.bulkloader.BulkLoadData "$@"
         ;;
-    loadsch)
-        shift
-        java -cp "$CP":"${utilityJar}" com.ibm.janusgraph.utils.importer.schema.SchemaLoader "$@"
-        ;;
     *)
         usage      # unknown option
         ;;
 esac
-#java -cp $CP:target/JanusGraphBench-0.0.1-SNAPSHOT.jar com.ibm.janusgraph.utils.importer.BatchImport $@
-#java -cp $CP:target/JanusGraphBench-0.0.1-SNAPSHOT.jar com.ibm.janusgraph.utils.importer.schema.SchemaLoader $@
-#java -cp $CP:target/JanusGraphBench-0.0.1-SNAPSHOT.jar com.ibm.janusgraph.utils.generator.JanusGraphBench $@
-

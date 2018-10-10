@@ -146,9 +146,13 @@ You can also change the number of vertices and number of edges from a specific t
 There are other tiny, small, medium and large sample JSON configuration files already created to generate a random data set.<br/>
 You can use these configuration files to generate a huge dataset, run interactive queries on the data and test the performance of a Amazon Neptune cluster.<br/>
 
-# Sample output
+# Connecting to Amazon Neptune cluster from the RESTful Client
+You can send requests to an Amazon Neptune instance running in a VPC from a RESTful WS client such as Postman using any of the below approaches:
+* RESTful WS client -> Amazon ALB -> HA Proxy -> Amazon Neptune
+* RESTful WS client -> Amazon NLB -> Amazon Neptune
+* Any other similar approaches which exposes Amazon Neptune endpoint through proxy layer
 
-![Sample output for "Find Indiana Jones' tweets that his followers retweeted"](doc/source/images/sample_output.png)
+More details on this can be found @ 
 
 # Links
 * [Amazon Neptune Samples](https://github.com/aws-samples/amazon-neptune-samples): Sample data sets and code examples for Amazon Neptune.

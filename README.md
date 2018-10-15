@@ -145,7 +145,7 @@ There are other tiny, small, medium and large sample JSON configuration files al
 You can use these configuration files to generate a huge dataset, run interactive queries on the data and test the performance of a Amazon Neptune cluster.<br/>
 
 # Connecting to an Amazon Neptune cluster from the RESTful WS Client
-You can send requests to an Amazon Neptune instance running in a VPC from a RESTful WS client such as Postman using any of the below approaches:
+You can send requests to an Amazon Neptune instance running in a VPC from a RESTful WS client such as [Postman] (https://learning.getpostman.com/docs/postman/launching_postman/sending_the_first_request/) using any of the below approaches:
 * RESTful WS client -> Amazon ALB -> HA Proxy -> Amazon Neptune
 * RESTful WS client -> Amazon NLB -> Amazon Neptune
 * Any other similar approaches which exposes Amazon Neptune endpoint through proxy layer

@@ -1,4 +1,4 @@
-Note: The following queries work assuming the super user (with node_id=1 in User.csv) name is 'Indiana Jones' and date-helper.groovy is loaded in JanusGraph console or server. If the super user name is different, simply replace it in the queries.
+Note: The following queries work assuming the super user (with node_id=1 in User.csv) name is 'Indiana Jones'. If the super user name is different, simply replace it in the queries.
 
 1. Who follows ‘Indiana Jones’?
 g.V().has('name', 'Indiana Jones').in('Follows').values('name')
@@ -7,13 +7,13 @@ g.V().has('name', 'Indiana Jones').in('Follows').values('name')
 g.V().has('name', 'Indiana Jones').out('Tweets').values('text')
 
 3. Find Indiana Jones’ tweets in Jan 2017
-g.V().has('name', 'Indiana Jones').outE('Tweets').has('Date',between(createDate(2017,1,1),createDate(2017,2,1))).inV().values('text')
+g.V().has('name', 'Indiana Jones').outE('Tweets').has('Date',between(datetime('2017-01-01'), datetime('2017-01-31'))).inV().values('text')
 
 4. Who tweeted 'Romeo'?
 g.V().has('text', textContains('Romeo')).in('Tweets').dedup().values('name')
 
 5. Who tweeted 'Romeo' in Jan 2017?
-g.V().has('text', textContains('Romeo')).inE('Tweets').has('Date',between(createDate(2017,1,1),createDate(2017,2,1))).outV().dedup().values('name')
+g.V().has('text', textContains('Romeo')).inE('Tweets').has('Date',between(datetime('2017-01-01'), datetime('2017-01-31'))).outV().dedup().values('name')
 
 6. Who likes Indiana Jones' tweets
 g.V().has('name', 'Indiana Jones').out('Tweets').in('Likes').dedup().values('name')
@@ -34,7 +34,7 @@ g.addV('User').property('name','John Doe')
 g.addV('Tweet').property('text','Hello, Friday!')
 
 12. John Doe tweets a message
-g.V().has('text', 'Hello, Friday!').as('a').V().has('name', 'John Doe').addE('Tweets').to('a').property('Date',createDate(2017,8,18))
+g.V().has('text', 'Hello, Friday!').as('a').V().has('name', 'John Doe').addE('Tweets').to('a').property('Date',datetime('2017-08-18'))
 
 13. Make John Doe follow Indiana Jones
 g.V().has('name', 'Indiana Jones').as('a').V().has('name', 'John Doe').addE('Follows').to('a')

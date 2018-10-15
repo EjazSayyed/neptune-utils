@@ -52,7 +52,7 @@ public class CSVGenerator {
     private long CURRENT_TIME = cal.getTimeInMillis();
     private int[] RANDOM_INT_RANGE = {100000,99999999};
     private long[] RANDOM_TIME_RANGE = {(long)0, CURRENT_TIME};
-    private SimpleDateFormat TIME_FORMAT = new SimpleDateFormat("dd-MMM-yyyy");
+    private SimpleDateFormat TIME_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
 
     /**
      * Initialize csv generator
@@ -111,6 +111,7 @@ public class CSVGenerator {
                         RandomUtils.nextLong(this.RANDOM_TIME_RANGE[0],
                                              this.RANDOM_TIME_RANGE[1]));
                     rec.add(TIME_FORMAT.format(cal.getTime()).toString());
+                    
             }
             else{
                 if ( value.dataSubType != null && value.dataSubType.toLowerCase().equals("name")) {
@@ -162,7 +163,17 @@ public class CSVGenerator {
         
         IdBean ids;
         if (type.columns != null) {
-            header.addAll( type.columns.keySet());
+            //header.addAll( type.columns.keySet()); 
+            type.columns.forEach((name, value) -> {
+            	if(value.dataType.equals("Date"))
+            	{
+            		header.add(name+":Date"); //Neptune Date format on column
+            	}
+            	else
+            	{
+            		header.add(name);
+            	}
+            });
         }
         try {
             for (RelationBean relation: type.relations) {
@@ -251,7 +262,8 @@ public class CSVGenerator {
     void writeVertexCSV(VertexTypeBean type, String s3Bucket, String bucketFolder ){
         String fileName = type.name + ".csv";
         String filePath = "/tmp/" + fileName;
-        
+        //String name=null;
+        //com.aws.neptune.utils.generator.bean.ColumnBean value=null;
         ArrayList<String> header = new ArrayList<String>();
         
         S3Uploader s3Uploader = new S3Uploader();
@@ -261,6 +273,11 @@ public class CSVGenerator {
         //ejazs - adding headers per Amazon Neptune format for bulk loader
         header.add("~id");
         header.addAll(type.columns.keySet());
+        
+        /*type.columns.forEach((name, value) -> {
+        	System.out.println("==>"+name + value.dataType);
+        });*/
+        
         header.add("~label");
         
         int botId = idFactory.getMinId(type.name);

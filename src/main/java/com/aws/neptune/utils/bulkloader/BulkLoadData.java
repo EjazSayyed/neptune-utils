@@ -98,6 +98,11 @@ public class BulkLoadData {
 				 payload = robj.getJSONObject("payload");
 				 overallStatus = payload.getJSONObject("overallStatus");
 				 System.out.println(overallStatus.getString("status") + ". Loaded "+ overallStatus.get("totalRecords")+ " records..");
+				 if(overallStatus.getString("status").equals("LOAD_FAILED"))
+				 {
+					 System.out.println(overallStatus.getString("status") + ". Run curl -G http://"+ neptuneEndpoint + "/loader/"+loadId+"?details=true for more details.");
+					 break;
+				 }
 				 Thread.sleep(2000);
 			 }
 		 }

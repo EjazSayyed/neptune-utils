@@ -6,7 +6,7 @@
         "name": {"dataType":"String", "dataSubType":"name", "composit":true},
         "RegisteredDate": {
           "dataType":"Date","composit":true,
-          "dateRange":{"from":"01-Jan-2003", "to":"01-Jan-2015"}
+          "dateRange":{"from":"2003-01-25", "to":"2015-01-01"}
         },
         "notification": {"dataType":"String", "dataSubType":"custom", "options": ["Email","SMS", "Both"], "composit":true},
         "usercity": {"dataType":"String", "dataSubType":"Address", "composit":true}
@@ -50,7 +50,7 @@
       "columns": {
         "Date": {
           "dataType":"Date","composit":true,
-          "dateRange":{"from":"01-Jan-2015", "to":"31-Dec-2017"}
+          "dateRange":{"from":"2015-01-25", "to":"2017-12-31"}
         }
       },
       "relations": [
